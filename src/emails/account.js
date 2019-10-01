@@ -45,7 +45,7 @@ const sendWhyDelete = (email,name) =>{
         from: "echaaranimohamed@gmail.com",
         to: email,
         subject: "Hello",
-        text: `Hi ${name} :( , Tell us why did you delete you account motherFucker`
+        text: `Hi ${name} :( , Tell us why did you delete you account PLiiiiiiiiiizzzzzzz -_-`
         
     },(err,body)=>{
         if(err) throw Error(err)
