@@ -8,6 +8,6 @@ require('./db/mongoose')
 app.use(express.json())
 app.use(userRouter)
 app.use(taskRouter)
-app.use(cors())
+app.options('*',cors())
 
 module.exports = app
