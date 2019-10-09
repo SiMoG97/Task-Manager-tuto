@@ -6,16 +6,9 @@ const multer = require('multer');
 const sharp = require('sharp')
 const {sendWelcome , sendWhyDelete} = require('../emails/account')
 
-//my tests 
-const cors = require('cors')
-
-var corsOptions = {
-    origin: 'https://ubisi.csb.app/',
-    optionsSuccessStatus: 201 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
 
 //Create new user
-router.post('/users',cors(corsOptions),async (req,res)=>{
+router.post('/users',async (req,res)=>{
     const user = new User(req.body)
     try{
         const token = await user.generatedAuthToken()
